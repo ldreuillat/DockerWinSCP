@@ -11,6 +11,9 @@ using System.IO;
 
 namespace DockerWinSCP
 {
+    /**
+     * Form used to display local and container File System and to allow copy between each other
+     **/
     public partial class FileSystemExplorer : Form
     {
         public string containerId;
@@ -142,6 +145,11 @@ namespace DockerWinSCP
         private void localTreeView_ItemDrag(object sender, ItemDragEventArgs e)
         {
             DoDragDrop(e.Item, DragDropEffects.Copy);
+        }
+
+        private void containerTreeView_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+
         }
     }
 }

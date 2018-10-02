@@ -42,9 +42,6 @@ namespace DockerWinSCP
             this.localTreeView.TabIndex = 0;
             this.localTreeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.localTreeView_AfterSelect);
             this.localTreeView.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.localTreeView_MouseDoubleClick);
-            this.localTreeView.DragEnter += localTreeView_DragEnter;
-            this.localTreeView.DragDrop += localTreeView_DragDrop;
-            this.localTreeView.ItemDrag += localTreeView_ItemDrag;
             // 
             // containerTreeView
             // 
@@ -52,6 +49,7 @@ namespace DockerWinSCP
             this.containerTreeView.Name = "containerTreeView";
             this.containerTreeView.Size = new System.Drawing.Size(443, 395);
             this.containerTreeView.TabIndex = 1;
+            this.containerTreeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.containerTreeView_AfterSelect);
             // 
             // FileSystemExplorer
             // 
